@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>David Bakyelle — Curriculum Vitae</title>
+  <meta name="description" content="CV of David Bakyelle, BSc IT student at UENR, based in Kumasi, Ghana. Cloud, IT support, application testing and frontend development.">
+  <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/fonts.css">
+  <style>
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    :root {
+      --ink: #10151d;
+      --muted: #4c5766;
+      --faint: #66707e;
+      --line: #d8dee7;
+      --accent: #a8681a;
+      --paper: #ffffff;
+      --tint: #f6f7f9;
+      --sans: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+    body {
+      margin: 0;
+      background: #e9ecf1;
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 9.8px;
+      line-height: 1.48;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    p, h1, h2, h3, ul { margin: 0; }
+    ul { padding: 0; list-style: none; }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      padding: 11mm 13mm 9mm;
+      background: var(--paper);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header ------------------------------------------------------------- */
+
+    .cv-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14mm;
+      padding-bottom: 3.6mm;
+      border-bottom: 1.5px solid var(--ink);
+    }
+
+    .cv-name {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.02;
+      letter-spacing: -0.035em;
+    }
+
+    .cv-handle {
+      margin-left: 6px;
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      vertical-align: 11px;
+    }
+
+    .cv-role {
+      margin-top: 2.4mm;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 8.2px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .cv-contact {
+      flex: none;
+      text-align: right;
+      font-family: var(--mono);
+      font-size: 8.1px;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .cv-contact a { display: block; }
+
+    .cv-contact a:hover { color: var(--accent); }
+
+    /* Layout ------------------------------------------------------------- */
+
+    .cv-grid {
+      display: grid;
+      grid-template-columns: 1fr 55mm;
+      gap: 8mm;
+      padding-top: 4.6mm;
+      flex: 1;
+    }
+
+    .block + .block { margin-top: 4.8mm; }
+
+    .label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 2.1mm;
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 7.2px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .label::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--line);
+    }
+
+    .summary {
+      font-size: 9.8px;
+      line-height: 1.58;
+      color: var(--muted);
+      max-width: 64ch;
+    }
+
+    .summary strong { color: var(--ink); font-weight: 600; }
+
+    /* Entries ------------------------------------------------------------ */
+
+    .entry { break-inside: avoid; }
+
+    .entry + .entry {
+      margin-top: 3.4mm;
+      padding-top: 3.4mm;
+      border-top: 1px solid var(--line);
+    }
+
+    .entry-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 5mm;
+    }
+
+    .entry-role {
+      font-size: 10.8px;
+      font-weight: 600;
+      line-height: 1.28;
+      letter-spacing: -0.012em;
+    }
+
+    .entry-date {
+      flex: none;
+      color: var(--faint);
+      font-family: var(--mono);
+      font-size: 7.5px;
+      letter-spacing: 0.03em;
+    }
+
+    .entry-org {
+      margin-top: 0.6mm;
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 7.9px;
+      letter-spacing: 0.02em;
+    }
+
+    .entry-list {
+      margin-top: 1.4mm;
+    }
+
+    .entry-list li {
+      position: relative;
+      padding-left: 3mm;
+      color: var(--muted);
+      font-size: 9.2px;
+      line-height: 1.46;
+    }
+
+    .entry-list li + li { margin-top: 0.45mm; }
+
+    .entry-list li::before {
+      content: "";
+      position: absolute;
+      top: 0.6em;
+      left: 0;
+      width: 2.2mm;
+      height: 1px;
+      background: var(--faint);
+    }
+
+    .entry-text {
+      margin-top: 1mm;
+      color: var(--muted);
+      font-size: 9.2px;
+      line-height: 1.5;
+    }
+
+    /* Projects ---------------------------------------------------------- */
+
+    .project-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.6mm 4.6mm;
+    }
+
+    .project {
+      break-inside: avoid;
+    }
+
+    .project h3 {
+      font-size: 9.8px;
+      font-weight: 600;
+      line-height: 1.28;
+    }
+
+    .project p {
+      margin-top: 0.5mm;
+      color: var(--muted);
+      font-size: 8.5px;
+      line-height: 1.4;
+    }
+
+    .project .stack {
+      margin-top: 0.7mm;
+      color: var(--faint);
+      font-family: var(--mono);
+      font-size: 6.8px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    /* Sidebar ----------------------------------------------------------- */
+
+    .side .block + .block { margin-top: 4.4mm; }
+
+    .skill-group + .skill-group { margin-top: 2.4mm; }
+
+    .skill-group h3 {
+      font-family: var(--mono);
+      font-size: 7.2px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .skill-group p {
+      margin-top: 0.55mm;
+      color: var(--muted);
+      font-size: 8.3px;
+      line-height: 1.46;
+    }
+
+    .cert {
+      border-left: 1.4px solid var(--accent);
+      padding-left: 2.4mm;
+    }
+
+    .cert h3 {
+      font-size: 9.5px;
+      font-weight: 600;
+      line-height: 1.28;
+    }
+
+    .cert p {
+      margin-top: 0.45mm;
+      color: var(--muted);
+      font-size: 8.1px;
+      line-height: 1.4;
+    }
+
+    .cert + .cert { margin-top: 2.4mm; }
+
+    .fact-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 2.6mm;
+      padding: 1.15mm 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 8.3px;
+    }
+
+    .fact-list span:first-child {
+      color: var(--faint);
+      font-family: var(--mono);
+      font-size: 7.1px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .fact-list span:last-child { text-align: right; }
+
+    /* Footer ------------------------------------------------------------ */
+
+    .cv-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6mm;
+      margin-top: 4.6mm;
+      padding-top: 2.4mm;
+      border-top: 1px solid var(--line);
+      color: var(--faint);
+      font-family: var(--mono);
+      font-size: 6.9px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .cv-foot span:last-child { color: var(--accent); }
+
+    @media screen {
+      body { padding: 12mm 0; }
+      .page { box-shadow: 0 2mm 10mm rgba(16, 21, 29, 0.16); }
+    }
+
+    /* Phone reading: the A4 sheet becomes a single column. Print is unchanged. */
+    @media screen and (max-width: 760px) {
+      body { padding: 0; background: var(--paper); }
+      .page {
+        width: 100%;
+        min-height: 0;
+        padding: 22px 18px 26px;
+        box-shadow: none;
+      }
+      .cv-head {
+        flex-direction: column;
+        gap: 12px;
+        padding-bottom: 16px;
+      }
+      .cv-name { font-size: 26px; }
+      .cv-handle { font-size: 11px; vertical-align: 8px; }
+      .cv-role { font-size: 10px; }
+      .cv-contact { text-align: left; font-size: 10px; line-height: 1.75; }
+      .cv-grid { grid-template-columns: 1fr; gap: 0; padding-top: 20px; }
+      .block + .block { margin-top: 24px; }
+      .side { margin-top: 24px; }
+      .side .block + .block { margin-top: 22px; }
+      .label { font-size: 9px; margin-bottom: 10px; }
+      .summary { font-size: 12px; line-height: 1.6; }
+      .entry-role { font-size: 12.5px; }
+      .entry-date { font-size: 9.5px; }
+      .entry-org { font-size: 10px; }
+      .entry-list li,
+      .entry-text { font-size: 11.5px; line-height: 1.55; }
+      .project-row { grid-template-columns: 1fr; gap: 16px; }
+      .project h3 { font-size: 12px; }
+      .project p { font-size: 10.5px; }
+      .project .stack { font-size: 8.5px; }
+      .skill-group h3 { font-size: 9px; }
+      .skill-group p { font-size: 10.5px; }
+      .cert h3 { font-size: 11.5px; }
+      .cert p { font-size: 10px; }
+      .fact-list li { font-size: 10.5px; }
+      .fact-list span:first-child { font-size: 9px; }
+      .cv-foot {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        font-size: 8.5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="cv-head">
+      <div>
+        <h1 class="cv-name">David Bakyelle<span class="cv-handle">/ Prime</span></h1>
+        <p class="cv-role">Cloud · IT Support · Application Testing · Frontend</p>
+      </div>
+      <address class="cv-contact">
+        <a href="mailto:dbakyelle13@gmail.com">dbakyelle13@gmail.com</a>
+        <a href="tel:+233203715556">0203715556</a>
+        <a href="https://github.com/bakyelle">github.com/bakyelle</a>
+        <a href="https://www.linkedin.com/in/david-bakyelle-b27171338">linkedin.com/in/david-bakyelle</a>
+        <span>Kumasi, Ghana · UTC+0</span>
+      </address>
+    </header>
+
+    <div class="cv-grid">
+      <div>
+        <section class="block">
+          <h2 class="label">Profile</h2>
+          <p class="summary">
+            BSc Information Technology student at the University of Energy and Natural Resources
+            (UENR), based in Kumasi. Focused on <strong>cloud fundamentals, IT support, application
+            testing and frontend development</strong>. AWS Certified Cloud Practitioner and AWS
+            re/Start graduate with support experience at Christian Service University and I-Akrotech.
+            Currently looking for an internship or junior role in cloud, IT support or web development.
+          </p>
+        </section>
+
+        <section class="block">
+          <h2 class="label">Experience</h2>
+
+          <article class="entry">
+            <div class="entry-head">
+              <h3 class="entry-role">Technical Support &amp; Application Testing Intern</h3>
+              <span class="entry-date">Apr–Jun 2026</span>
+            </div>
+            <p class="entry-org">I-Akrotech Company Limited · Ghana</p>
+            <ul class="entry-list">
+              <li>Executed structured test cases and identified system defects.</li>
+              <li>Provided first-level technical support and diagnosed application issues.</li>
+              <li>Followed the lifecycle of enterprise solution deployments.</li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head">
+              <h3 class="entry-role">IT Support Unit Intern</h3>
+              <span class="entry-date">Oct–Dec 2025</span>
+            </div>
+            <p class="entry-org">Christian Service University · Kumasi</p>
+            <ul class="entry-list">
+              <li>Delivered frontline support for hardware, software, password resets and account lockouts.</li>
+              <li>Maintained university laptops and desktops, and managed shared printers, scanners and projectors.</li>
+              <li>Supported the Moodle LMS and kept registration and CBT platforms stable during peak periods.</li>
+              <li>Ran cybersecurity awareness sessions and trained staff on cloud and security basics.</li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head">
+              <h3 class="entry-role">Deputy Welfare Chairperson</h3>
+              <span class="entry-date">Jan–Sep 2025</span>
+            </div>
+            <p class="entry-org">UENR, Department of IT and Decision Sciences · Fiapre, Sunyani</p>
+            <ul class="entry-list">
+              <li>Coordinated welfare initiatives covering health support, financial aid and counselling.</li>
+              <li>Planned events, introduced peer support and improved communication between leadership and members.</li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head">
+              <h3 class="entry-role">AWS re/Start Cloud Trainee</h3>
+              <span class="entry-date">Sep 2024–Jan 2025</span>
+            </div>
+            <p class="entry-org">Amazon Web Services · Kumasi</p>
+            <p class="entry-text">Five-month programme covering Linux, networking, security, Python, databases and core AWS services, with hands-on labs and the AWS Certified Cloud Practitioner exam.</p>
+          </article>
+        </section>
+
+        <section class="block">
+          <h2 class="label">Selected projects</h2>
+          <div class="project-row">
+            <article class="project">
+              <h3>MedQueue GH</h3>
+              <p>Cross-platform healthcare access app for local hospitals, piloted with UENR Health Services.</p>
+              <p class="stack">Python · Mobile · Healthcare</p>
+            </article>
+            <article class="project">
+              <h3>Employee Management System</h3>
+              <p>VB.NET desktop app with SQL Server for employee records, CRUD operations and salary management.</p>
+              <p class="stack">VB.NET · SQL Server · Desktop</p>
+            </article>
+            <article class="project">
+              <h3>Weather Web App</h3>
+              <p>Python web app with an HTML interface that checks the weather in any city in the world.</p>
+              <p class="stack">Python · HTML · Weather API</p>
+            </article>
+            <article class="project">
+              <h3>AWS CloudFormation Template</h3>
+              <p>Infrastructure-as-code lab template for a VPC, public subnet and Amazon Linux EC2 instance.</p>
+              <p class="stack">CloudFormation · VPC · EC2</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="block">
+          <h2 class="label">Education</h2>
+          <article class="entry">
+            <div class="entry-head">
+              <h3 class="entry-role">BSc Information Technology</h3>
+              <span class="entry-date">2022 – 2026</span>
+            </div>
+            <p class="entry-org">University of Energy and Natural Resources · Sunyani</p>
+            <p class="entry-text">Coursework in programming, databases, networking, operating systems and information security. Expected graduation 2026.</p>
+          </article>
+          <article class="entry">
+            <div class="entry-head">
+              <h3 class="entry-role">W.A.S.S.C.E, Applied Science</h3>
+              <span class="entry-date">2018 – 2021</span>
+            </div>
+            <p class="entry-org">Kumasi Senior High Technical School · Kumasi</p>
+          </article>
+          <article class="entry">
+            <div class="entry-head">
+              <h3 class="entry-role">IPMC Foundation</h3>
+              <span class="entry-date">2018</span>
+            </div>
+            <p class="entry-org">Intercom Programming &amp; Manufacturing Co. Ltd · Kumasi</p>
+            <p class="entry-text">MS Office suite and internet fundamentals.</p>
+          </article>
+        </section>
+      </div>
+
+      <aside class="side">
+        <section class="block">
+          <h2 class="label">Cloud &amp; DevOps</h2>
+          <div class="skill-group">
+            <h3>Core</h3>
+            <p>AWS core services, cloud security fundamentals, Linux administration, networking, AWS pricing and cost awareness, Python automation with Boto3</p>
+          </div>
+        </section>
+
+        <section class="block">
+          <h2 class="label">Frontend</h2>
+          <div class="skill-group">
+            <h3>Working with</h3>
+            <p>HTML5 and semantic markup, CSS Grid and Flexbox, JavaScript (ES6+), responsive and accessible UI, Adobe Photoshop</p>
+          </div>
+        </section>
+
+        <section class="block">
+          <h2 class="label">Software &amp; support</h2>
+          <div class="skill-group">
+            <h3>Build</h3>
+            <p>Python, Node.js and Express, SQL, REST APIs, Git and GitHub, testing and debugging</p>
+          </div>
+          <div class="skill-group">
+            <h3>Support</h3>
+            <p>Hardware and software troubleshooting, Windows and Linux support, network diagnostics, manual and application testing, Moodle LMS administration, cybersecurity awareness</p>
+          </div>
+        </section>
+
+        <section class="block">
+          <h2 class="label">Tools</h2>
+          <div class="skill-group">
+            <p>AWS Management Console, Git and GitHub, VS Code, Linux command line, ArcGIS, Adobe Photoshop, Microsoft Office</p>
+          </div>
+        </section>
+
+        <section class="block">
+          <h2 class="label">Certifications</h2>
+          <div class="cert">
+            <h3>AWS Certified Cloud Practitioner</h3>
+            <p>Amazon Web Services · 2025</p>
+          </div>
+          <div class="cert">
+            <h3>AWS re/Start Graduate</h3>
+            <p>Amazon Web Services · 2025</p>
+          </div>
+          <div class="cert">
+            <h3>IPMC Foundation</h3>
+            <p>Intercom Programming &amp; Manufacturing Co. Ltd · 2018</p>
+          </div>
+          <div class="cert">
+            <h3>Operating Systems Basics</h3>
+            <p>Cisco Networking Academy</p>
+          </div>
+        </section>
+
+        <section class="block">
+          <h2 class="label">Details</h2>
+          <ul class="fact-list">
+            <li><span>Location</span><span>Kumasi, Ghana</span></li>
+            <li><span>Remote</span><span>Available</span></li>
+            <li><span>Status</span><span>Open to internships</span></li>
+            <li><span>Languages</span><span>English · Twi · French</span></li>
+            <li><span>Portfolio</span><span>davidbakyelle.com</span></li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <footer class="cv-foot">
+      <span>David Bakyelle · Curriculum Vitae</span>
+      <span>References available on request</span>
+    </footer>
+  </main>
+</body>
+</html>

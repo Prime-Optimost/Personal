@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="fav-title">
+  <title id="fav-title">David Bakyelle, Prime</title>
+  <rect width="64" height="64" rx="10" fill="#060a12"/>
+  <rect x="0.5" y="0.5" width="63" height="63" rx="9.5" fill="none" stroke="#1d293c"/>
+  <path d="M32 9v46" stroke="#f0a63a" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="32" cy="16" r="3.5" fill="#f0a63a"/>
+  <text x="32" y="44" fill="#eef2f8" font-family="Archivo, Arial, sans-serif" font-size="27" font-weight="700" text-anchor="middle" letter-spacing="-1">P</text>
+  <path d="M20 51h24" stroke="#f0a63a" stroke-width="1.5" opacity="0.7"/>
+</svg>

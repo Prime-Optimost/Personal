@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found | David Bakyelle</title>
+  <meta name="description" content="That page is not here. Return to the portfolio of David Bakyelle, BSc IT student and cloud, IT support and frontend developer in Kumasi, Ghana.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#060a12">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <style>
+    :root {
+      --ground: #060a12;
+      --surface: #0b1220;
+      --ink: #eef2f8;
+      --muted: #9dabc0;
+      --faint: #7b8aa0;
+      --line: #1d293c;
+      --line-strong: #2b3b53;
+      --accent: #f0a63a;
+      --accent-ink: #0a101a;
+      --font-sans: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --font-mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      min-height: 100svh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 40px;
+      padding: clamp(20px, 4vw, 40px) clamp(20px, 5vw, 72px);
+      background:
+        radial-gradient(ellipse 60% 45% at 80% 0%, rgba(240, 166, 58, 0.08), transparent 65%),
+        var(--ground);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    h1, p { margin: 0; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 44px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .brand-mark {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border: 1px solid var(--line-strong);
+      background: var(--surface);
+      color: var(--accent);
+      font-family: var(--font-mono);
+      font-size: 14px;
+      line-height: 1;
+    }
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: #5bd6a2;
+    }
+    .brand-handle {
+      color: var(--faint);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 0.72fr);
+      align-items: center;
+      gap: clamp(32px, 6vw, 88px);
+      width: min(100%, 1120px);
+      margin-inline: auto;
+    }
+    .index {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 22px;
+      color: var(--ink);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+    .index span { color: var(--accent); }
+    h1 {
+      max-width: 15ch;
+      font-size: clamp(2.4rem, 1.4rem + 4.6vw, 5rem);
+      font-weight: 600;
+      font-stretch: 108%;
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      text-wrap: balance;
+    }
+    .lede {
+      max-width: 46ch;
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: clamp(1rem, 0.94rem + 0.2vw, 1.1rem);
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-top: 32px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 20px;
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: var(--accent-ink);
+      font-size: 14px;
+      font-weight: 600;
+      transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+    .btn:hover { background: var(--ink); border-color: var(--ink); }
+    .link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid var(--line-strong);
+      color: var(--ink);
+      font-size: 13.5px;
+      font-weight: 500;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+    .link:hover { color: var(--accent); border-color: var(--accent); }
+    .art {
+      position: relative;
+      aspect-ratio: 1;
+      max-width: 420px;
+      justify-self: end;
+      width: 100%;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle, rgba(157, 171, 192, 0.16) 1px, transparent 1.5px) 0 0 / 20px 20px,
+        var(--surface);
+      overflow: hidden;
+    }
+    .art svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px 24px;
+      width: min(100%, 1120px);
+      margin-inline: auto;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--faint);
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .meta a:hover { color: var(--accent); }
+    @media (max-width: 760px) {
+      main { grid-template-columns: 1fr; align-items: start; }
+      .art { order: -1; max-width: 220px; justify-self: start; }
+      h1 { max-width: 18ch; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true">P</span>
+      <span>David Bakyelle <span class="brand-handle">/ Prime</span></span>
+      <span style="position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0,0,0,0)">Home</span>
+    </a>
+  </header>
+
+  <main>
+    <div>
+      <p class="index"><span>404</span> Off the meridian</p>
+      <h1>This page left the map.</h1>
+      <p class="lede">
+        The address is wrong or the page has moved. The good news: the whole portfolio is one
+        page, and the work is two clicks away.
+      </p>
+      <div class="actions">
+        <a class="btn" href="/">Back to home</a>
+        <a class="link" href="/#work">See the projects</a>
+      </div>
+    </div>
+
+    <div class="art" aria-hidden="true">
+      <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="200" cy="200" r="132" stroke="#24344c"/>
+        <circle cx="200" cy="200" r="96" stroke="#1a273b" stroke-dasharray="2 9"/>
+        <circle cx="200" cy="200" r="42" stroke="#2b3b53"/>
+        <path d="M200 40v320M40 200h320" stroke="#1d293c"/>
+        <path d="M200 40v320" stroke="#f0a63a" opacity="0.55"/>
+        <circle cx="200" cy="200" r="4" fill="#f0a63a"/>
+        <circle cx="200" cy="68" r="3" fill="#f0a63a"/>
+        <path d="M262 138l-62 62 30 8 32-70Z" fill="#0e1727" stroke="#9dabc0"/>
+        <path d="M262 138l-24 54-8-30 32-24Z" fill="#f0a63a" opacity="0.85"/>
+        <g fill="#7b8aa0" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="1.5">
+          <text x="30" y="32">N</text>
+          <text x="360" y="32">06°41′19″N</text>
+          <text x="30" y="384">01°37′28″W</text>
+          <text x="316" y="384">UTC+0</text>
+        </g>
+      </svg>
+    </div>
+  </main>
+
+  <footer class="meta">
+    <span>David Bakyelle · Kumasi, Ghana</span>
+    <span><a href="mailto:dbakyelle13@gmail.com">dbakyelle13@gmail.com</a></span>
+  </footer>
+</body>
+</html>
